@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomBottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemRippleColor">@null</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="itemPaddingTop">10dp</item>
+        <item name="itemPaddingBottom">0dp</item>
+    </style>
+</resources>

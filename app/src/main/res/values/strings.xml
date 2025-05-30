@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GradenWateringScheduler</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_plants">My Plants</string>
+    <string name="placeholder">placeHolder</string>
+    <string name="welcome_to_plant_watering">Welcome to plant watering</string>
+    <string name="add_your_first_plant">Add your first plant</string>
+    <string name="keep_track_of_your_plant_s_watering_schedules_and_never_forget_to_water_them_again">Keep track of your plant\'s watering schedules and never forget to water them again.</string>
+    <string name="multiple_watering_time">Multiple Watering Times</string>
+    <string name="app_feature">App Feature:</string>
+    <string name="set_multiple_watering_times_per_day_for_each_plant">Set multiple watering times per day for each plant</string>
+    <string name="custom_schedules">Custom Schedules</string>
+    <string name="create_daily_or_custom_watering_schedules">Create daily or custom watering schedules</string>
+    <string name="watering_progress">Watering Progress</string>
+    <string name="track_your_watering_progress_throughout_the_day">Track your watering progress throughout the day</string>
+</resources>
