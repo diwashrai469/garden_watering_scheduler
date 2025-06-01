@@ -1,11 +1,11 @@
-package com.app.gradenwateringscheduler.ui
+package com.app.gradenwateringscheduler.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.app.gradenwateringscheduler.R
+import androidx.navigation.fragment.findNavController
 import com.app.gradenwateringscheduler.databinding.FragmentHomeViewBinding
 
 
@@ -18,8 +18,17 @@ class HomeViewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeViewBinding.inflate(inflater, container, false)
+
+        binding.addPlant.setOnClickListener {
+            val direction =  HomeViewFragmentDirections.actionNavHomeToAddPlantViewFragment()
+            findNavController().navigate(direction)
+        }
+
+        binding.fabAddPlant.setOnClickListener {
+            val direction =  HomeViewFragmentDirections.actionNavHomeToAddPlantViewFragment()
+            findNavController().navigate(direction)
+        }
+
         return binding.root
     }
-
-
 }

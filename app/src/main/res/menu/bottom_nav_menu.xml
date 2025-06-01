@@ -3,14 +3,13 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/home_select"
-        android:title="My Plant" />
+        android:title="@string/my_plant" />
     <item
         android:id="@+id/nav_schedules"
         android:icon="@drawable/schedule_unselect"
-
-        android:title="Schedule" />
+        android:title="@string/schedule" />
     <item
         android:id="@+id/nav_settings"
         android:icon="@drawable/setting_unselect"
-        android:title="Settings" />
+        android:title="@string/settings" />
 </menu>

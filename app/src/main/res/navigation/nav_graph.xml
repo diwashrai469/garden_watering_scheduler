@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <!-- Home fragment -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.app.gradenwateringscheduler.ui.home.HomeViewFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_view" >
+        <action
+            android:id="@+id/action_nav_home_to_addPlantViewFragment"
+            app:destination="@id/addPlantViewFragment" />
+    </fragment>
+
+    <!-- Add Plant fragment -->
+    <fragment
+        android:id="@+id/addPlantViewFragment"
+        android:name="com.app.gradenwateringscheduler.ui.home.AddPlantViewFragment"
+        android:label="Add Plant"
+        tools:layout="@layout/fragment_add_plant_view" />
+
+    <!-- Schedule fragment -->
+    <fragment
+        android:id="@+id/nav_schedules"
+        android:name="com.app.gradenwateringscheduler.ui.ScheduleViewFragment"
+        android:label="Schedules"
+        tools:layout="@layout/fragment_schedule_view" />
+
+    <!-- Settings fragment -->
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.app.gradenwateringscheduler.ui.SettingsViewFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings_view" />
+
+</navigation>

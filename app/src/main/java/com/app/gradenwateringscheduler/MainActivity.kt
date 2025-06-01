@@ -1,46 +1,40 @@
 package com.app.gradenwateringscheduler
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
+import androidx.core.view.isVisible
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.app.gradenwateringscheduler.databinding.ActivityMainBinding
-import com.app.gradenwateringscheduler.ui.HomeViewFragment
-import com.app.gradenwateringscheduler.ui.ScheduleViewFragment
-import com.app.gradenwateringscheduler.ui.SettingsViewFragment
+
+val destinationsWithoutBottomNav = setOf(
+    R.id.addPlantViewFragment,
+)
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var mainBinding: ActivityMainBinding
+
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        mainBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mainBinding.root)
 
-        loadFragment(HomeViewFragment())
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        mainBinding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_home -> loadFragment(HomeViewFragment())
+        // Find NavHostFragment from your activity_main.xml
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-                R.id.nav_schedules -> loadFragment(ScheduleViewFragment())
+        navController = navHostFragment.navController
 
-                R.id.nav_settings -> loadFragment(SettingsViewFragment())
+        // Connect BottomNavigationView with NavController for automatic handling of fragment switching
+        binding.bottomNavigation.setupWithNavController(navController)
 
-                else -> false
-
-            }
+        // Hide bottom navigation on certain destinations
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            binding.bottomNavigation.isVisible = !destinationsWithoutBottomNav.contains(destination.id)
         }
     }
-
-    private fun loadFragment(fragment: Fragment): Boolean {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
-        return true
-    }
-
-
 }

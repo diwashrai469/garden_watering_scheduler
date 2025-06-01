@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.HomeViewFragment">
+    tools:context=".ui.home.HomeViewFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -68,8 +68,8 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/add_plant"
-                android:layout_width="250dp"
-                android:layout_height="60dp"
+                android:layout_width="240dp"
+                android:layout_height="55dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/primary"
@@ -80,8 +80,8 @@
                 app:cornerRadius="10dp"
                 app:icon="@drawable/add"
                 app:iconGravity="start"
-                app:iconPadding="8dp"
-                app:iconSize="24dp"
+                app:iconPadding="2dp"
+                app:iconSize="26dp"
                 app:iconTint="@android:color/white" />
 
             <com.google.android.material.card.MaterialCardView

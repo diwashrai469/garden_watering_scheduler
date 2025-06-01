@@ -14,4 +14,9 @@
     <string name="create_daily_or_custom_watering_schedules">Create daily or custom watering schedules</string>
     <string name="watering_progress">Watering Progress</string>
     <string name="track_your_watering_progress_throughout_the_day">Track your watering progress throughout the day</string>
+    <string name="add_plant_photo">Add Plant Photo</string>
+    <string name="image_placeholder">image placeholder</string>
+    <string name="my_plant">My Plant</string>
+    <string name="schedule">Schedule</string>
+    <string name="settings">Settings</string>
 </resources>
