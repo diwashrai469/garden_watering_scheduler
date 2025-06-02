@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- When switch is checked (ON) - dark primary color -->
+    <item android:state_checked="true" android:color="@color/primary_dark" />
+    <!-- When switch is unchecked (OFF) - white color -->
+    <item android:color="@android:color/white" />
+</selector>

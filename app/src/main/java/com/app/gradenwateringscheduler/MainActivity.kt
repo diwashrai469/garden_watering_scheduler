@@ -1,5 +1,4 @@
 package com.app.gradenwateringscheduler
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -34,7 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         // Hide bottom navigation on certain destinations
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            binding.bottomNavigation.isVisible = !destinationsWithoutBottomNav.contains(destination.id)
+            binding.bottomNavigation.post {
+                binding.bottomNavigation.isVisible = !destinationsWithoutBottomNav.contains(destination.id)
+            }
         }
+
     }
 }
