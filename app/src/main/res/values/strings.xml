@@ -29,4 +29,15 @@
     <string name="custom_days">Custom days</string>
     <string name="every_day">Every day</string>
     <string name="select_watering_days">Select Watering Days:</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="watering_times">Watering Times</string>
+    <string name="add_time">Add Time</string>
+    <string name="you_can_set_multiple_watering_times_per_day_toggle_the_switch_to_enable_disable_each_time">You can set multiple watering times per day. Toggle the switch to enable/disable each time</string>
+    <string name="add_plant">Add Plant</string>
 </resources>
